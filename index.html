@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+	<title>Base Trading</title>
+</head>
+
+<body>
+	<div class="container mx-auto p-5">
+		<div class="row">
+			<div class="col-7 mx-2">
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text">Capital</span>
+					</div>
+					<input type="number" min="0" class="form-control" id="capital" value="1000">
+				</div>
+			</div>
+			<div class="col mx-2">
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text">%</span>
+					</div>
+					<input type="number" min="0" max="100" class="form-control" id="percentage" value="85">
+				</div>
+			</div>
+		</div>
+		<div class="mx-auto my-4 text-center">
+			<button type="button" class="btn col-5 btn-info" onclick="addInvest()">Invester</button>
+			<div class="input-group mx-auto my-3 col-4">
+				<div class="input-group-prepend">
+					<span class="input-group-text">Total</span>
+				</div>
+				<input type="text" class="form-control text-center" id="ccapital" readonly>
+			</div>
+			<div class="my-4 mx-auto col-lg-8 col-12" id="items">
+			</div>
+		</div>
+	</div>
+
+	<div class="footer fixed-bottom bg-white">
+		<hr class="m-0">
+		<div class="d-flex justify-content-center" style="height: 60px;">
+			<h4 class="mx-5 my-auto">Win : <span id="wins" class="mx-2">0</span></h4>
+			<span class="mx-5"></span>
+			<h4 class="mx-5 my-auto">Profit : <span id="profit" class="mx-2">0</span></h4>
+		</div>
+		<button type="button" class="btn col-1 btn-danger" id="clear" onclick="clearAll()">Effacer</button>
+	</div>
+</body>
+<script>window.$ = window.jQuery = require('jquery');</script>
+<script src="bootstrap/popper.min.js"></script>
+<script src="bootstrap/bootstrap.min.js"></script>
+<script src="main.js"></script>
+
+</html>
